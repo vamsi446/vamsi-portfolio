@@ -53,3 +53,23 @@ const select = (el, all = false) => {
     return document.querySelector(el)
   }
 }
+
+var container = document.getElementById('hero-lottie-container');
+
+fetch('./assests/Animation - 1710783778640.json')
+  .then(response => response.json())
+  .then(animationData => {
+    var anim = lottie.loadAnimation({
+        container: container, 
+        renderer: 'svg', 
+        loop: true, 
+        autoplay: true, 
+        animationData: animationData 
+    });
+  })
+  .catch(error => {
+    console.error('Error loading animationData.json:', error);
+  });
+
+
+ 
