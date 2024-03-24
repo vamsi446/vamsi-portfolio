@@ -366,7 +366,7 @@ body {
 }
 
 
-.skill-icon img {
+.skill-icon img, svg {
   height: 60px;
   width: 60px;
   padding: 5px;
@@ -617,12 +617,7 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-
-.project-container {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .project-card {
